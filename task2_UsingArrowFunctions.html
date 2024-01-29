@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // a.Print odd numbers in an array
+        console.log("a.Print odd numbers in an array")
+        // Arrow function
+        let arr1 = [1, 49, 56, 98, 67, 35, 34]
+        let res = []
+        let oddNum = (a) => {
+            for (let k = 0; k < a.length; k++) {
+                if (a[k] % 2 != 0) {
+                    res.push(a[k])
+                }
+            }
+        }
+        oddNum(arr1)
+        console.log("odd numbers in an array using Arrow Function :", res)
+
+        // b.Convert all the strings to title caps in a string array
+        console.log("b.Convert all the strings to title caps in a string array")
+
+        let strArray = ["Friends", "family", "world", "flowers", "happy birthday"]
+        let s = (str) => {
+            for (let i = 0; i < str.length; i++) {
+                let temp = str[i].split(" ")
+                if (temp.length > 1) {
+                    for (let j = 0; j < temp.length; j++) {
+                        temp[j] = temp[j][0].toUpperCase() + temp[j].slice(1)
+                        str[i] = temp.join(" ")
+                    }
+                } else {
+                    str[i] = str[i][0].toUpperCase() + str[i].slice(1)
+                }
+            }
+            console.log("using Arrow Function :", str)
+        }
+        s(strArray)
+
+        // c.Sum of all numbers in an array
+        console.log("c.Sum of all numbers in an array")
+
+        var x = [74, 65, 83, 97, 10]
+        let sumResult = 0
+        var sumOfNumbers = (p) => {
+            for (let y = 0; y < p.length; y++) {
+                sumResult += p[y]
+            }
+            console.log("Using Arrow Function :", sumResult)
+        }
+        sumOfNumbers(x)
+
+        // d.Return all the prime numbers in an array
+        console.log("d.Return all the prime numbers in an array")
+
+        var pArr = [1, 2, 3, 4, 67, 43, 89, 91, 73, 48, 97]
+        var primeNumbers = []
+        var isPrime = (pr) => {
+            for (let i = 0; i < pr.length; i++) {
+                var pNum = pr[i]
+                if (pNum > 1) {
+                    let temp = 0
+                    for (let j = 2; j < pNum; j++) {
+                        if (pNum % j == 0) {
+                            temp++
+                        }
+                    }
+                    if (temp < 1) {
+                        primeNumbers.push(pr[i])
+                    }
+                }
+            }
+            console.log("Using Arrow Function :", primeNumbers)
+        }
+        isPrime(pArr)
+
+        // e.Return all the palindromes in an array
+        console.log("e.Return all the palindromes in an array")
+
+        var m = ["choice", "nun", "head", "wow", "gthtg"]
+        var palins = []
+        var f = (k) => {
+            for (let i = 0; i < k.length; i++) {
+                let t = k[i].split("").reverse().join("")
+                if (k[i] == t) {
+                    palins.push(k[i])
+                }
+            }
+            console.log("Using Arrow Function :", palins)
+        }
+        f(m)
+
+    </script>
+</body>
+
+</html>
